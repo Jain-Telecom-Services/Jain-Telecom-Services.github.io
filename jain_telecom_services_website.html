@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Jain Telecom Services – CCTV, Power Backup & Communication | Delhi NCR</title>
+<meta name="description" content="Jain Telecom Services – Delhi NCR's trusted provider for CCTV installation, inverter & UPS rental, EPABX systems, and AMC. Rental model with zero upfront cost."/>
+<meta name="keywords" content="CCTV installation Delhi NCR, CCTV camera on rent Delhi, inverter on rent Delhi NCR, UPS system rental Delhi, online UPS installation Delhi, EPABX system Delhi NCR, office intercom on rent, security camera installation near me, power backup solution for office Delhi, AMC service Delhi NCR"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --ink:#0b1220;
+  --ink-2:#131e30;
+  --ink-3:#1a2740;
+  --steel:#2a3f5f;
+  --orange:#f47c20;
+  --orange-2:#ff9a4a;
+  --orange-dim:rgba(244,124,32,.12);
+  --orange-glow:rgba(244,124,32,.25);
+  --cream:#f0ece4;
+  --white:#ffffff;
+  --muted:rgba(240,236,228,.55);
+  --border:rgba(244,124,32,.18);
+  --card:rgba(26,39,64,.6);
+}
+body{font-family:'Outfit',sans-serif;background:var(--ink);color:var(--cream);overflow-x:hidden}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:var(--orange);border-radius:2px}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6%;height:66px;
+  background:rgba(11,18,32,.92);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.35rem;letter-spacing:.04em;color:var(--white);text-decoration:none}
+.logo em{color:var(--orange);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{background:var(--orange)!important;color:var(--ink)!important;padding:.45rem 1.1rem;border-radius:4px;font-weight:600!important}
+.nav-cta:hover{background:var(--orange-2)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px;transition:.3s}
+.mobile-menu{display:none;position:fixed;top:66px;left:0;right:0;background:var(--ink-2);border-bottom:1px solid var(--border);padding:1.5rem 6%;z-index:199;flex-direction:column;gap:1rem}
+.mobile-menu a{color:var(--muted);text-decoration:none;font-size:1rem;font-weight:500;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.05);display:block}
+.mobile-menu.open{display:flex}
+
+/* ── HERO ── */
+#home{
+  min-height:100vh;display:flex;align-items:center;
+  padding:100px 6% 60px;position:relative;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(244,124,32,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(244,124,32,.06) 1px,transparent 1px);
+  background-size:70px 70px;
+  mask-image:radial-gradient(ellipse 70% 70% at 60% 40%,black 20%,transparent 75%);
+}
+.hero-orb{
+  position:absolute;width:800px;height:800px;border-radius:50%;
+  background:radial-gradient(circle,rgba(244,124,32,.1) 0%,transparent 65%);
+  right:-200px;top:-200px;pointer-events:none;
+}
+.hero-orb-2{
+  position:absolute;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,39,64,.9) 0%,transparent 70%);
+  left:-100px;bottom:-100px;pointer-events:none;
+}
+.hero-inner{position:relative;z-index:1;max-width:700px}
+.hero-chip{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--orange-dim);border:1px solid var(--border);
+  padding:.3rem .9rem;border-radius:100px;
+  font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--orange-2);margin-bottom:1.8rem;
+  animation:up .7s ease both;
+}
+.hero-chip::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--orange);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(3rem,7vw,5.5rem);font-weight:900;
+  line-height:1.02;letter-spacing:-.01em;margin-bottom:1.4rem;
+  animation:up .7s .1s ease both;
+}
+h1 .accent{color:var(--orange);position:relative}
+h1 .accent::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:4px;background:var(--orange);opacity:.3;border-radius:2px}
+.hero-tagline{
+  font-size:1.05rem;line-height:1.75;color:var(--muted);font-weight:300;
+  max-width:540px;margin-bottom:2.5rem;animation:up .7s .2s ease both;
+}
+.hero-btns{display:flex;flex-wrap:wrap;gap:.9rem;animation:up .7s .3s ease both}
+.btn-o{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--orange);color:var(--ink);
+  padding:.85rem 1.8rem;border-radius:6px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.04em;
+  text-decoration:none;transition:all .2s;
+  box-shadow:0 0 30px var(--orange-glow);
+}
+.btn-o:hover{background:var(--orange-2);transform:translateY(-2px);box-shadow:0 0 45px var(--orange-glow)}
+.btn-g{
+  display:inline-flex;align-items:center;gap:.5rem;
+  border:1px solid var(--border);color:var(--cream);
+  padding:.85rem 1.8rem;border-radius:6px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.04em;
+  text-decoration:none;transition:all .2s;
+}
+.btn-g:hover{border-color:var(--orange);color:var(--orange);background:var(--orange-dim)}
+.hero-3up{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+  margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);
+  animation:up .7s .4s ease both;
+}
+.h3-item{}
+.h3-icon{font-size:1.8rem;margin-bottom:.5rem}
+.h3-label{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:.2rem}
+.h3-sub{font-size:.78rem;color:var(--muted);line-height:1.4}
+
+/* ── SECTION COMMON ── */
+section{padding:80px 6%}
+.sec-tag{display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem}
+.sec-tag span{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+.sec-tag::before{content:'';width:28px;height:2px;background:var(--orange);flex-shrink:0}
+.sec-h{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem}
+.sec-h em{color:var(--orange);font-style:normal}
+.sec-p{color:var(--muted);font-size:.95rem;line-height:1.75;font-weight:300;max-width:560px;margin-bottom:3rem}
+
+/* ── SERVICES ── */
+#services{background:var(--ink-2)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.svc-card{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:2rem;position:relative;overflow:hidden;
+  backdrop-filter:blur(10px);transition:all .3s;
+}
+.svc-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--orange),transparent);
+  transform:scaleX(0);transform-origin:left;transition:transform .3s;
+}
+.svc-card:hover{border-color:var(--orange);transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-icon{font-size:2.4rem;margin-bottom:1.2rem}
+.svc-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:.03em;margin-bottom:.7rem}
+.svc-card>p{font-size:.88rem;color:var(--muted);line-height:1.65;font-weight:300;margin-bottom:1.3rem}
+.svc-modes{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.3rem}
+.mode-pill{
+  font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+  padding:.25rem .7rem;border-radius:100px;
+  background:var(--orange-dim);border:1px solid var(--border);color:var(--orange-2);
+}
+.svc-list{list-style:none}
+.svc-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.83rem;color:var(--muted);padding:.28rem 0;line-height:1.4}
+.svc-list li::before{content:'→';color:var(--orange);font-size:.75rem;margin-top:1px;flex-shrink:0}
+
+/* ── RENTAL ── */
+#rental{position:relative;overflow:hidden}
+#rental::before{content:'₹0';position:absolute;right:-40px;top:-60px;font-family:'Barlow Condensed',sans-serif;font-size:20rem;font-weight:900;color:rgba(244,124,32,.04);line-height:1;pointer-events:none;z-index:0}
+.rental-inner{position:relative;z-index:1}
+.rental-hero{
+  background:linear-gradient(135deg,#131e30 0%,#1a2f50 60%,#131e30 100%);
+  border:1px solid var(--orange);border-radius:16px;
+  padding:3.5rem;margin-bottom:2rem;
+  display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;
+}
+.rental-hero h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.1;margin-bottom:1rem}
+.rental-hero h2 span{color:var(--orange)}
+.rental-hero p{color:var(--muted);font-size:.95rem;line-height:1.7;font-weight:300;margin-bottom:1.8rem}
+.rental-steps{display:flex;flex-direction:column;gap:1rem}
+.step{display:flex;gap:1rem;align-items:flex-start}
+.step-n{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--orange);color:var(--ink);
+  font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:900;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.step-body strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.03em;margin-bottom:.15rem}
+.step-body span{font-size:.82rem;color:var(--muted)}
+.rental-perks{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.perk{
+  background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:1.4rem 1.2rem;text-align:center;transition:border-color .2s;
+}
+.perk:hover{border-color:var(--orange)}
+.perk-ic{font-size:1.8rem;margin-bottom:.6rem}
+.perk strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.03em;margin-bottom:.3rem}
+.perk p{font-size:.8rem;color:var(--muted);line-height:1.45}
+
+/* ── WHY ── */
+#why{background:var(--ink-2)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.why-left{}
+.why-features{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.feat{
+  background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:1.5rem;transition:all .25s;position:relative;overflow:hidden;
+}
+.feat:hover{border-color:var(--orange)}
+.feat-num{
+  font-family:'Barlow Condensed',sans-serif;font-size:3.5rem;font-weight:900;
+  color:var(--orange);opacity:.12;line-height:1;margin-bottom:.3rem;
+}
+.feat h4{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:.03em;margin-bottom:.4rem}
+.feat p{font-size:.82rem;color:var(--muted);line-height:1.55}
+.why-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.wstat{
+  background:linear-gradient(135deg,var(--orange-dim),transparent);
+  border:1px solid var(--border);border-radius:10px;padding:1.3rem;text-align:center;
+}
+.wstat-n{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--orange);line-height:1}
+.wstat-l{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:.3rem}
+
+/* ── INDUSTRIES ── */
+#industries{}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem}
+.ind-card{
+  background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:1.5rem;display:flex;align-items:flex-start;gap:1rem;
+  transition:all .25s;
+}
+.ind-card:hover{border-color:var(--orange);transform:translateY(-3px)}
+.ind-icon{font-size:1.8rem;flex-shrink:0}
+.ind-card h4{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;letter-spacing:.03em;margin-bottom:.3rem}
+.ind-card p{font-size:.8rem;color:var(--muted);line-height:1.5}
+.ind-cta{
+  background:linear-gradient(135deg,#1a2f50,#131e30);
+  border:1px solid var(--orange);border-radius:12px;
+  padding:2.2rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.ind-cta p strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:.02em;margin-bottom:.3rem}
+.ind-cta p{font-size:.9rem;color:var(--muted);max-width:480px}
+
+/* ── CONTACT ── */
+#contact{background:var(--ink-2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}
+.contact-left h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.1;margin-bottom:1rem}
+.contact-left p{color:var(--muted);font-size:.95rem;line-height:1.7;font-weight:300;margin-bottom:2rem}
+.contact-methods{display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem}
+.cmethod{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:1.1rem 1.3rem;text-decoration:none;color:var(--cream);
+  transition:all .2s;
+}
+.cmethod:hover{border-color:var(--orange);background:var(--orange-dim)}
+.cmethod-ic{width:42px;height:42px;background:var(--orange-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.cmethod strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.03em;margin-bottom:.1rem}
+.cmethod span{font-size:.82rem;color:var(--muted)}
+.areas{display:flex;flex-wrap:wrap;gap:.5rem}
+.area-tag{
+  font-size:.78rem;font-weight:500;
+  padding:.3rem .8rem;border-radius:100px;
+  background:var(--orange-dim);border:1px solid var(--border);color:var(--muted);
+}
+.form-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.5rem;backdrop-filter:blur(8px)}
+.form-box h3{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;letter-spacing:.03em;margin-bottom:1.6rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-size:.75rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
+.fg input,.fg select,.fg textarea{
+  width:100%;background:rgba(11,18,32,.7);border:1px solid var(--border);
+  border-radius:6px;padding:.72rem 1rem;color:var(--cream);
+  font-family:'Outfit',sans-serif;font-size:.88rem;transition:border-color .2s;outline:none;
+}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(240,236,228,.25)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--orange)}
+.fg select option{background:var(--ink-2)}
+.fg textarea{min-height:90px;resize:vertical}
+.fsub{
+  width:100%;background:var(--orange);color:var(--ink);border:none;
+  padding:.9rem 2rem;border-radius:6px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:.04em;
+  cursor:pointer;transition:all .2s;margin-top:.4rem;
+}
+.fsub:hover{background:var(--orange-2);transform:translateY(-2px)}
+
+/* ── FOOTER ── */
+footer{
+  background:#060d19;border-top:1px solid var(--border);
+  padding:1.8rem 6%;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+}
+.fl{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.04em}
+.fl em{color:var(--orange);font-style:normal}
+footer p{font-size:.8rem;color:var(--muted)}
+.flinks{display:flex;gap:1.5rem;list-style:none}
+.flinks a{font-size:.8rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.flinks a:hover{color:var(--orange)}
+
+/* ── WA FLOAT ── */
+.wafloat{
+  position:fixed;bottom:1.8rem;right:1.8rem;z-index:300;
+  width:56px;height:56px;border-radius:50%;background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);
+  animation:bob 3s ease-in-out infinite;
+}
+.wafloat:hover{transform:scale(1.12)!important;box-shadow:0 8px 32px rgba(37,211,102,.6)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.wafloat svg{width:28px;height:28px;fill:white}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ── ANIMATIONS ── */
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── MOBILE ── */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  h1{font-size:clamp(2.5rem,9vw,4rem)}
+  .hero-3up{grid-template-columns:1fr 1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .rental-hero{grid-template-columns:1fr;gap:2rem;padding:2rem}
+  .rental-perks{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr;gap:2.5rem}
+  .why-features{grid-template-columns:1fr 1fr}
+  .ind-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .frow{grid-template-columns:1fr}
+  .ind-cta{flex-direction:column;align-items:flex-start}
+  .why-stats{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:580px){
+  .hero-3up{grid-template-columns:1fr}
+  .rental-perks{grid-template-columns:1fr}
+  .ind-grid{grid-template-columns:1fr}
+  .why-features{grid-template-columns:1fr}
+  .why-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="logo">JAIN <em>TELECOM</em> SERVICES</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#rental">Rental</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mm">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#rental" onclick="toggleMenu()">Rental Plans</a>
+  <a href="#why" onclick="toggleMenu()">Why Choose Us</a>
+  <a href="#industries" onclick="toggleMenu()">Industries</a>
+  <a href="#contact" onclick="toggleMenu()">Contact & Quote</a>
+</div>
+
+<!-- ══ HOME / HERO ══ -->
+<section id="home">
+  <div class="hero-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb-2"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-chip">📍 Serving Delhi, Noida, Gurgaon, Ghaziabad & Faridabad</div>
+    <h1>Security. Power. <span class="accent">Communication.</span><br>One Trusted Partner.</h1>
+    <p class="hero-tagline">Integrated Security, Power Backup &amp; Communication Solutions for Delhi NCR — available on rental, AMC, or outright installation. Zero upfront cost with our rental model.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+a+free+quote+from+Jain+Telecom+Services." class="btn-o" target="_blank">💬 WhatsApp for Free Quote</a>
+      <a href="tel:+919711199648" class="btn-g">📞 Call Now: 97111 99648</a>
+    </div>
+    <div class="hero-3up">
+      <div class="h3-item">
+        <div class="h3-icon">📷</div>
+        <div class="h3-label">Security &amp; CCTV</div>
+        <div class="h3-sub">HD cameras, NVR setup, remote monitoring &amp; AMC</div>
+      </div>
+      <div class="h3-item">
+        <div class="h3-icon">⚡</div>
+        <div class="h3-label">Power Backup</div>
+        <div class="h3-sub">Inverters, Online &amp; Offline UPS — rental or owned</div>
+      </div>
+      <div class="h3-item">
+        <div class="h3-icon">📞</div>
+        <div class="h3-label">EPABX &amp; Intercom</div>
+        <div class="h3-sub">Office communication systems, wired &amp; wireless</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="sec-tag"><span>Our Services</span></div>
+  <h2 class="sec-h">Three Domains. <em>One Team.</em></h2>
+  <p class="sec-p">Every service is available as a one-time installation, an annual maintenance contract, or a flexible rental — whichever fits your budget and operations best.</p>
+  <div class="services-grid">
+
+    <div class="svc-card reveal">
+      <div class="svc-icon">📷</div>
+      <h3>Security &amp; CCTV Systems</h3>
+      <p>Professional CCTV camera installation, commissioning, and long-term maintenance for homes, offices, shops, housing societies, and commercial establishments across Delhi NCR.</p>
+      <div class="svc-modes">
+        <span class="mode-pill">Installation</span>
+        <span class="mode-pill">Rental</span>
+        <span class="mode-pill">AMC</span>
+        <span class="mode-pill">Repair</span>
+      </div>
+      <ul class="svc-list">
+        <li>HD / IP / PTZ camera installation &amp; commissioning — CCTV installation Delhi NCR</li>
+        <li>CCTV camera on rent Delhi — monthly &amp; annual plans</li>
+        <li>Night vision, IR &amp; bullet cameras for indoor/outdoor</li>
+        <li>NVR / DVR setup, storage configuration &amp; remote viewing</li>
+        <li>AMC service Delhi NCR with scheduled preventive maintenance</li>
+        <li>Repair, troubleshooting &amp; emergency breakdown support</li>
+        <li>Security camera installation near me — full NCR coverage</li>
+      </ul>
+      <div style="margin-top:1.5rem">
+        <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+to+enquire+about+CCTV+services." class="btn-o" target="_blank" style="font-size:.85rem;padding:.6rem 1.2rem">Get CCTV Quote →</a>
+      </div>
+    </div>
+
+    <div class="svc-card reveal" style="transition-delay:.1s">
+      <div class="svc-icon">⚡</div>
+      <h3>Power Backup Solutions</h3>
+      <p>Keep your office, shop, or facility running 24/7. We supply, install, and maintain inverters, battery banks, Online UPS, and Offline UPS systems — with rental options and AMC contracts for industrial and commercial clients.</p>
+      <div class="svc-modes">
+        <span class="mode-pill">Supply &amp; Install</span>
+        <span class="mode-pill">Rental</span>
+        <span class="mode-pill">AMC</span>
+        <span class="mode-pill">Emergency Repair</span>
+      </div>
+      <ul class="svc-list">
+        <li>Online UPS installation Delhi — hospitals, offices, data rooms</li>
+        <li>Offline UPS systems for homes, shops &amp; small offices</li>
+        <li>Inverter on rent Delhi NCR — zero upfront, full service</li>
+        <li>UPS system rental Delhi — monthly &amp; annual contracts</li>
+        <li>Power backup solution for office Delhi — load analysis included</li>
+        <li>Battery replacement, preventive maintenance &amp; AMC</li>
+        <li>Emergency breakdown response across NCR</li>
+      </ul>
+      <div style="margin-top:1.5rem">
+        <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+to+enquire+about+power+backup+solutions." class="btn-o" target="_blank" style="font-size:.85rem;padding:.6rem 1.2rem">Get Power Backup Quote →</a>
+      </div>
+    </div>
+
+    <div class="svc-card reveal" style="transition-delay:.2s">
+      <div class="svc-icon">📞</div>
+      <h3>Communication Systems</h3>
+      <p>Reliable internal communication for businesses, institutions, and multi-floor buildings. From EPABX installation to intercom network design — available outright or on rent with full support included.</p>
+      <div class="svc-modes">
+        <span class="mode-pill">Installation</span>
+        <span class="mode-pill">Rental</span>
+        <span class="mode-pill">AMC</span>
+        <span class="mode-pill">Expansion</span>
+      </div>
+      <ul class="svc-list">
+        <li>EPABX system Delhi NCR — office telephony for SMBs &amp; corporates</li>
+        <li>Office intercom on rent — no upfront investment</li>
+        <li>End-to-end wiring, configuration &amp; commissioning</li>
+        <li>VoIP integration &amp; hybrid EPABX systems</li>
+        <li>Expansion of existing systems — add extensions &amp; lines</li>
+        <li>AMC contracts with priority response for communication systems</li>
+        <li>Repair &amp; fault diagnosis for all major EPABX brands</li>
+      </ul>
+      <div style="margin-top:1.5rem">
+        <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+to+enquire+about+EPABX+or+intercom+systems." class="btn-o" target="_blank" style="font-size:.85rem;padding:.6rem 1.2rem">Get EPABX Quote →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ RENTAL ══ -->
+<section id="rental">
+  <div class="rental-inner">
+    <div class="sec-tag"><span>Rental Model</span></div>
+    <h2 class="sec-h">₹0 Upfront. <em>Full Service Included.</em></h2>
+    <p class="sec-p">Our rental model is built for businesses that want professional-grade security and power backup without locking up capital. Pay a predictable monthly or annual fee — we handle everything else.</p>
+
+    <div class="rental-hero reveal">
+      <div>
+        <div style="display:inline-block;background:var(--orange);color:var(--ink);font-size:.75rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:.3rem .8rem;border-radius:4px;margin-bottom:1.2rem">★ Signature Offering</div>
+        <h2>Why Buy When You Can <span>Rent &amp; Relax?</span></h2>
+        <p>Businesses across Delhi NCR — from RWAs to hospitals to law firms — choose our rental model because it removes all the risk and hassle of owning equipment. We install, we maintain, we upgrade. You just use it.</p>
+        <div class="hero-btns" style="margin-top:0">
+          <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+details+on+the+rental+plans+for+CCTV+%2F+UPS+%2F+EPABX." class="btn-o" target="_blank">Get Rental Plan Details →</a>
+          <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+to+book+a+free+site+visit." class="btn-g" target="_blank">Book Free Site Visit</a>
+        </div>
+      </div>
+      <div class="rental-steps">
+        <div class="step">
+          <div class="step-n">1</div>
+          <div class="step-body"><strong>Call or WhatsApp Us</strong><span>Tell us your requirements — location, size, what you need</span></div>
+        </div>
+        <div class="step">
+          <div class="step-n">2</div>
+          <div class="step-body"><strong>Free Site Assessment</strong><span>Our technician visits your premises at no charge</span></div>
+        </div>
+        <div class="step">
+          <div class="step-n">3</div>
+          <div class="step-body"><strong>Customised Rental Plan</strong><span>We recommend equipment and share monthly/annual pricing</span></div>
+        </div>
+        <div class="step">
+          <div class="step-n">4</div>
+          <div class="step-body"><strong>Installation &amp; Handover</strong><span>We install everything and brief your team</span></div>
+        </div>
+        <div class="step">
+          <div class="step-n">5</div>
+          <div class="step-body"><strong>Ongoing Service Included</strong><span>All maintenance, servicing, and support covered throughout the rental period</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rental-perks reveal">
+      <div class="perk">
+        <div class="perk-ic">💰</div>
+        <strong>Zero Upfront Cost</strong>
+        <p>No capital expenditure. Start protecting your business from day one.</p>
+      </div>
+      <div class="perk">
+        <div class="perk-ic">🔧</div>
+        <strong>Full AMC Included</strong>
+        <p>All maintenance, servicing, and emergency repairs covered in the rental.</p>
+      </div>
+      <div class="perk">
+        <div class="perk-ic">📈</div>
+        <strong>Easy to Scale Up</strong>
+        <p>Add more cameras, UPS units, or EPABX extensions as your business grows.</p>
+      </div>
+      <div class="perk">
+        <div class="perk-ic">🔄</div>
+        <strong>Upgrade Anytime</strong>
+        <p>Move to newer equipment without buying it — we handle the swap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY CHOOSE US ══ -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-left reveal">
+      <div class="sec-tag"><span>Why Choose Us</span></div>
+      <h2 class="sec-h">10+ Years. <em>One Vendor. Zero Headaches.</em></h2>
+      <p class="sec-p" style="margin-bottom:1.8rem">Hundreds of businesses across Delhi NCR trust us because we deliver on our promises — fast response, expert technicians, and proactive maintenance that prevents problems before they occur.</p>
+      <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+to+get+an+AMC+quote." class="btn-o" target="_blank" style="margin-bottom:1.8rem;display:inline-flex">Get AMC Quote →</a>
+      <div class="why-stats">
+        <div class="wstat"><div class="wstat-n">10+</div><div class="wstat-l">Years Experience</div></div>
+        <div class="wstat"><div class="wstat-n">3</div><div class="wstat-l">Service Domains</div></div>
+        <div class="wstat"><div class="wstat-n">NCR</div><div class="wstat-l">Wide Coverage</div></div>
+      </div>
+    </div>
+    <div class="why-features reveal" style="transition-delay:.15s">
+      <div class="feat">
+        <div class="feat-num">01</div>
+        <h4>Single Vendor Simplicity</h4>
+        <p>CCTV, power backup, and communication from one team. One call resolves any issue across all three systems — no more chasing different vendors.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-num">02</div>
+        <h4>Flexible Rental Model</h4>
+        <p>Our zero-upfront rental option frees your working capital. Pay monthly, get enterprise-grade equipment and full support — ideal for offices, shops, and RWAs.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-num">03</div>
+        <h4>Proactive AMC Contracts</h4>
+        <p>Scheduled preventive maintenance stops problems before they disrupt your business. Priority response guaranteed for all AMC clients across Delhi NCR.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-num">04</div>
+        <h4>Fast On-Site Response</h4>
+        <p>When something goes wrong, we come to you — not just on a phone call. Rapid on-site support across Delhi, Noida, Gurgaon, Ghaziabad, and Faridabad.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-num">05</div>
+        <h4>Trusted Long-Term Partner</h4>
+        <p>Our clients stay with us for years. We build relationships on consistent service quality, honest recommendations, and reliable follow-through.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-num">06</div>
+        <h4>Full NCR Coverage</h4>
+        <p>Wherever you are in the NCR — central Delhi, Noida sectors, Gurgaon corridors, Ghaziabad, or Faridabad — our technicians reach you quickly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INDUSTRIES ══ -->
+<section id="industries">
+  <div class="sec-tag"><span>Industries We Serve</span></div>
+  <h2 class="sec-h">Every Business. <em>Every Scale.</em></h2>
+  <p class="sec-p">From a single shop to a 500-unit housing society — our solutions are sized and priced for your specific requirements.</p>
+
+  <div class="ind-grid reveal">
+    <div class="ind-card">
+      <div class="ind-icon">🏘️</div>
+      <div><h4>Housing Societies &amp; RWAs</h4><p>CCTV for common areas, intercom for entry gates, power backup for lifts and common utilities — all on rental.</p></div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">🏢</div>
+      <div><h4>Offices &amp; Corporates</h4><p>CCTV surveillance, EPABX telephony, and Online UPS for servers and workstations — rental or outright.</p></div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">🏪</div>
+      <div><h4>Retail &amp; Shops</h4><p>Affordable CCTV on rent Delhi for single stores and retail chains. Quick installation, minimal disruption.</p></div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">🏥</div>
+      <div><h4>Hospitals &amp; Clinics</h4><p>Online UPS installation Delhi for critical equipment, CCTV for patient safety, and intercom for staff coordination.</p></div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">🏫</div>
+      <div><h4>Schools &amp; Institutions</h4><p>Campus-wide CCTV surveillance, EPABX systems for administration, and reliable power backup for uninterrupted operations.</p></div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">🏭</div>
+      <div><h4>Factories &amp; Industrial Units</h4><p>Ruggedised CCTV for production floors, high-capacity UPS and inverter systems — supply, install, and AMC.</p></div>
+    </div>
+  </div>
+
+  <div class="ind-cta reveal">
+    <p><strong>Not sure what you need? Let's find out together.</strong>We'll visit your site, assess your requirements, and recommend the right combination of security, power backup, and communication — at the right budget. No obligation.</p>
+    <div style="display:flex;flex-direction:column;gap:.7rem;flex-shrink:0">
+      <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+to+book+a+free+site+visit." class="btn-o" target="_blank">Book Free Site Visit</a>
+      <a href="tel:+919711199648" class="btn-g">📞 97111 99648</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <div class="sec-tag"><span>Contact Us</span></div>
+      <h2>Let's Talk About <em>Your Requirements</em></h2>
+      <p>Whether you need a single CCTV camera or a complete security + power + communication setup for your premises — we'll put together the right solution and quote within 24 hours.</p>
+      <div class="contact-methods">
+        <a href="tel:+919711199648" class="cmethod">
+          <div class="cmethod-ic">📞</div>
+          <div><strong>Call Us Directly</strong><span>+91 97111 99648 — Mon–Sat, 9am to 7pm</span></div>
+        </a>
+        <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+to+enquire+about+your+services." class="cmethod" target="_blank">
+          <div class="cmethod-ic">💬</div>
+          <div><strong>WhatsApp for Free Quote</strong><span>Send us a message — we respond fast</span></div>
+        </a>
+        <a href="https://wa.me/919711199648?text=Hi%2C+I%27d+like+to+book+a+free+site+visit." class="cmethod" target="_blank">
+          <div class="cmethod-ic">🗓️</div>
+          <div><strong>Book a Free Site Visit</strong><span>Our technician visits your premises at zero cost</span></div>
+        </a>
+      </div>
+      <div style="margin-bottom:.6rem;font-size:.78rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">Service Areas</div>
+      <div class="areas">
+        <span class="area-tag">Delhi</span>
+        <span class="area-tag">Noida</span>
+        <span class="area-tag">Greater Noida</span>
+        <span class="area-tag">Gurgaon</span>
+        <span class="area-tag">Faridabad</span>
+        <span class="area-tag">Ghaziabad</span>
+        <span class="area-tag">NCR Surrounding Areas</span>
+      </div>
+    </div>
+
+    <div class="form-box reveal" style="transition-delay:.15s">
+      <h3>Get a Free Quote</h3>
+      <div class="frow">
+        <div class="fg"><label>Your Name</label><input type="text" placeholder="Rahul Sharma"/></div>
+        <div class="fg"><label>Mobile Number</label><input type="tel" placeholder="+91 XXXXX XXXXX" id="fphone"/></div>
+      </div>
+      <div class="fg"><label>Business / Organisation</label><input type="text" placeholder="Company name, RWA, school..." id="fbiz"/></div>
+      <div class="fg"><label>Service Required</label>
+        <select id="fsvc">
+          <option value="">Select a service</option>
+          <option>CCTV Installation</option>
+          <option>CCTV on Rent</option>
+          <option>Inverter / UPS Installation</option>
+          <option>Inverter / UPS on Rent</option>
+          <option>EPABX / Intercom System</option>
+          <option>AMC Contract</option>
+          <option>Repair / Breakdown Support</option>
+          <option>Complete Setup (Multiple Services)</option>
+        </select>
+      </div>
+      <div class="fg"><label>Your Location / Area</label><input type="text" placeholder="e.g. Noida Sector 62, Dwarka, Gurgaon..." id="floc"/></div>
+      <div class="fg"><label>Message (Optional)</label><textarea placeholder="Tell us about your premises, number of floors, cameras needed, equipment type, etc." id="fmsg"></textarea></div>
+      <button class="fsub" onclick="sendWA()">Send Enquiry via WhatsApp →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="fl">JAIN <em>TELECOM</em> SERVICES</div>
+    <p style="margin-top:.3rem">CCTV · Power Backup · EPABX | Delhi NCR</p>
+  </div>
+  <p>© 2024 Jain Telecom Services. All rights reserved.</p>
+  <ul class="flinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#rental">Rental</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/919711199648?text=Hi%2C+I+want+to+enquire+about+Jain+Telecom+Services." class="wafloat" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.496.65 4.84 1.787 6.873L2 30l7.373-1.772A13.92 13.92 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.52 11.52 0 01-5.868-1.6l-.42-.25-4.38 1.05 1.08-4.26-.274-.44A11.52 11.52 0 014.4 16C4.4 9.592 9.592 4.4 16 4.4S27.6 9.592 27.6 16 22.408 27.6 16 27.6zm6.32-8.64c-.346-.173-2.05-1.012-2.369-1.127-.318-.115-.55-.173-.78.173-.23.346-.892 1.127-1.094 1.357-.2.23-.403.258-.748.086-.346-.173-1.46-.538-2.782-1.717-1.028-.916-1.722-2.047-1.924-2.393-.2-.346-.02-.532.152-.704.156-.156.346-.404.52-.606.173-.2.23-.346.346-.576.115-.23.057-.432-.029-.606-.086-.173-.78-1.88-1.07-2.574-.28-.676-.567-.584-.78-.594-.2-.01-.432-.012-.664-.012s-.606.086-.923.432c-.317.346-1.21 1.184-1.21 2.888s1.24 3.35 1.413 3.58c.173.23 2.44 3.726 5.91 5.224.827.357 1.472.57 1.975.73.83.263 1.585.226 2.182.137.665-.1 2.05-.838 2.34-1.648.29-.81.29-1.505.203-1.648-.086-.144-.317-.23-.664-.403z"/></svg>
+</a>
+
+<script>
+function toggleMenu(){document.getElementById('mm').classList.toggle('open')}
+// Scroll reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// WA form
+function sendWA(){
+  const n=document.querySelector('input[placeholder="Rahul Sharma"]').value.trim();
+  const ph=document.getElementById('fphone').value.trim();
+  const biz=document.getElementById('fbiz').value.trim();
+  const svc=document.getElementById('fsvc').value;
+  const loc=document.getElementById('floc').value.trim();
+  const msg=document.getElementById('fmsg').value.trim();
+  let t=`Hi, I'd like to enquire about Jain Telecom Services.\n\n`;
+  if(n)t+=`Name: ${n}\n`;
+  if(ph)t+=`Phone: ${ph}\n`;
+  if(biz)t+=`Organisation: ${biz}\n`;
+  if(svc)t+=`Service Needed: ${svc}\n`;
+  if(loc)t+=`Location: ${loc}\n`;
+  if(msg)t+=`Details: ${msg}\n`;
+  window.open(`https://wa.me/919711199648?text=${encodeURIComponent(t)}`,'_blank');
+}
+</script>
+</body>
+</html>
