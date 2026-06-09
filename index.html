@@ -13,19 +13,19 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{
-  --ink:#0b1220;
-  --ink-2:#131e30;
-  --ink-3:#1a2740;
-  --steel:#2a3f5f;
-  --orange:#f47c20;
-  --orange-2:#ff9a4a;
-  --orange-dim:rgba(244,124,32,.12);
-  --orange-glow:rgba(244,124,32,.25);
-  --cream:#f0ece4;
-  --white:#ffffff;
-  --muted:rgba(240,236,228,.55);
-  --border:rgba(244,124,32,.18);
-  --card:rgba(26,39,64,.6);
+  --ink: #ffffff; /* Main white background */
+  --ink-2: #f8f9fa; /* Secondary section backgrounds */
+  --ink-3: #e9ecef;
+  --steel: #64748b;
+  --orange: #f47c20;
+  --orange-2: #ff9a4a;
+  --orange-dim: rgba(244,124,32,.12);
+  --orange-glow: rgba(244,124,32,.25);
+  --cream: #0f172a; /* Main text changed to dark */
+  --white: #000000; /* Headings changed to black */
+  --muted: rgba(15,23,42,.65); /* Muted text changed to dark gray */
+  --border: rgba(244,124,32,.3);
+  --card: #ffffff;
 }
 body{font-family:'Outfit',sans-serif;background:var(--ink);color:var(--cream);overflow-x:hidden}
 
@@ -171,7 +171,7 @@ section{padding:80px 6%}
 #rental::before{content:'₹0';position:absolute;right:-40px;top:-60px;font-family:'Barlow Condensed',sans-serif;font-size:20rem;font-weight:900;color:rgba(244,124,32,.04);line-height:1;pointer-events:none;z-index:0}
 .rental-inner{position:relative;z-index:1}
 .rental-hero{
-  background:linear-gradient(135deg,#131e30 0%,#1a2f50 60%,#131e30 100%);
+ background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 60%,#f8f9fa 100%);
   border:1px solid var(--orange);border-radius:16px;
   padding:3.5rem;margin-bottom:2rem;
   display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;
@@ -236,7 +236,7 @@ section{padding:80px 6%}
 .ind-card h4{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;letter-spacing:.03em;margin-bottom:.3rem}
 .ind-card p{font-size:.8rem;color:var(--muted);line-height:1.5}
 .ind-cta{
-  background:linear-gradient(135deg,#1a2f50,#131e30);
+  background:linear-gradient(135deg,#f8f9fa,#e9ecef);
   border:1px solid var(--orange);border-radius:12px;
   padding:2.2rem 2.5rem;
   display:flex;align-items:center;justify-content:space-between;gap:2rem;
@@ -290,7 +290,7 @@ section{padding:80px 6%}
 
 /* ── FOOTER ── */
 footer{
-  background:#060d19;border-top:1px solid var(--border);
+ background:#ffffff;border-top:1px solid var(--border);
   padding:1.8rem 6%;
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
 }
@@ -343,6 +343,10 @@ footer p{font-size:.8rem;color:var(--muted)}
   .ind-grid{grid-template-columns:1fr}
   .why-features{grid-template-columns:1fr}
   .why-stats{grid-template-columns:1fr 1fr}
+}
+  /* Turns all emoji icons to match your --orange brand color */
+.h3-icon, .svc-icon, .perk-ic, .ind-icon, .cmethod-ic {
+  filter: invert(56%) sepia(87%) saturate(1500%) hue-rotate(348deg) brightness(99%) contrast(96%);
 }
 </style>
 </head>
